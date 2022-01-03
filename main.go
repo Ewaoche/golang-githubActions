@@ -6,8 +6,6 @@ import (
 	"math/rand"
 	"net/http"
 	"strconv"
-
-	"github.com/gorilla/mux"
 )
 
 // Book struct (Model)
