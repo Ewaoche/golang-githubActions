@@ -16,7 +16,7 @@ jobs:
           go vet ./...
       - name: Run tests
         run: go test -covermode=count -coverprofile=coverage.out ./... 
-      - name: Check code coverage > 50%
+      - name: Check code coverage <= 50%
         run: |
           total=`go tool cover -func=coverage.out | grep total | grep -Eo '[0-9]+\.[0-9]+'`
           if (( $(echo "$total <= 50" | bc -l) )) ; then
